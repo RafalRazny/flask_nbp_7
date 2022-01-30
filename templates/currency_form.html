@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="EN">
+    <head>
+       <meta charset="UTF-8">
+       <link rel="stylesheet" href="style.css">
+       <title>Currency Form</title>
+    </head>
+    <body>
+        <h1>This is a currency exchange calculator for PLN (polski złoty)</h1><br><br>
+        <h2>Please choose your currency from the list below and insert the amount</h2>
+
+        <form method="post" action="{{ url_for('calculation_pln') }}" id="calculation_pln">
+            <label for="code">Choose a currency</label>
+            <select name="code" id="code">
+                <option value="USD">USD</option>
+                <option value="AUD">AUD</option>
+                <option value="CAD">CAD</option>
+                <option value="EUR">EUR</option>
+                <option value="HUF">HUF</option>
+                <option value="CHF">CHF</option>
+                <option value="GBP">GBP</option>
+                <option value="JPY">JPY</option>
+                <option value="CZK">CZK</option>
+                <option value="DKK">DKK</option>
+                <option value="NOK">NOK</option>
+                <option value="SEK">SEK</option>
+                <option value="XDR">XDR</option>
+            </select>
+            <label for="amount">Insert amount</label>
+            <input type="text" id="amount" name="amount">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
